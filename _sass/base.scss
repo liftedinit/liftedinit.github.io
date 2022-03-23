@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+html,
+body {
+  color: $white;
+  font: $base-font;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  animation: color-loop 30s infinite;
+  font-weight: $base-font-weight;
+  text-transform: uppercase;
+}
+
+a {
+  color: $green;
+  text-decoration: none;
+}
+
+.site-header {
+  height: 7rem;
+}
+
+.site-logo {
+  display: block;
+  height: 4rem;
+  left: 2rem;
+  position: absolute;
+  top: 2rem;
+}
+
+.site-title {
+  color: $white;
+  display: block;
+  font-size: 1rem;
+  left: 7rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 3.5rem;
+}
+
+.site-description {
+  animation: color-loop 30s infinite;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  max-width: 30ch;
+}
+
+.site-footer .col {
+  margin: 2rem 0 1rem;
+}
+
+.social-media-list {
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
+
+.social-media-list img {
+  height: 2rem;
+  width: auto;
+}
+
+@keyframes color-loop {
+  0% {
+    color: $orange;
+  }
+  50% {
+    color: $white;
+  }
+  100% {
+    color: $orange;
+  }
+}
+
+.wrapper {
+  position: relative;
+  padding: 0 2em;
+}
+
+.project.card {
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+#mc_embed_signup {
+  .email {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    color: white;
+    font: $base-font;
+    outline: none;
+    padding: 0.5rem 1rem;
+    width: calc(100% - 2rem);
+  }
+  .button {
+    margin-top: 1rem;
+    padding: 0;
+    background: none;
+    color: $green;
+    border: none;
+    cursor: pointer;
+    font: $base-font;
+  }
+}
+
+@media (min-width: 680px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .site-footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    .cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      grid-auto-rows: minmax(100px, auto);
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .site-footer .cols {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+#bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1000;
+}

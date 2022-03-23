@@ -1,0 +1,12 @@
+<ul class="social-media-list">
+  {%- if site.github_username -%}
+    <li><a href="https://github.com/{{ site.github_username | cgi_escape | escape }}">
+      <img src="assets/icons/github.svg" alt="GitHub icon" />
+    </a></li>
+  {%- endif -%}
+  {%- if site.twitter_username -%}
+    <li><a href="https://twitter.com/{{ site.twitter_username | cgi_escape | escape }}">
+      <img src="assets/icons/twitter.svg" alt="Twitter icon" />
+    </a></li>
+  {%- endif -%}
+</ul>

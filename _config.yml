@@ -1,0 +1,15 @@
+title: The Lifted Initiative
+description: >-
+  Promoting the widespread adoption of environmentally-positive, open source
+  decentralized technology.
+baseurl: ""
+url: "https://theliftedinitiative.com"
+
+collections:
+  - projects
+
+twitter_username: lifted_init
+github_username: lifted_init
+
+plugins:
+  #  - jekyll-feed

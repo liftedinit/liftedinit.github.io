@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <p class="site-description">{{ site.description }}</p>
+
+  {{ content }}
+
+  <h3>Projects</h3>
+
+  <div class="projects">
+    {% assign sorted = site.projects | sort: "year" | reverse %}
+    {% for project in sorted %}
+      {%- include project.html %}
+    {% endfor %}
+  </div>
+
+</div>

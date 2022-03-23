@@ -1,0 +1,7 @@
+<div class="project card">
+  <h2>{{ project.name }} <small>({{ project.year }})</small></h2>
+  <p>{{ project.content | markdownify }}</p>
+  {% if project.link %}
+    <a href="{{ project.link }}">Learn more</a>
+  {% endif %}
+</div>
