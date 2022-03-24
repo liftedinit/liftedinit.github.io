@@ -3,13 +3,13 @@ description: >-
   Promoting the widespread adoption of environmentally-positive, open source
   decentralized technology.
 baseurl: ""
-url: "https://theliftedinitiative.com"
+url: "https://theliftedinitiative.org"
 
 collections:
   - projects
 
-twitter_username: lifted_init
-github_username: lifted_init
+twitter_username: the_lifted_init
+github_username: l-1-labs
 
 plugins:
   #  - jekyll-feed
