@@ -1,4 +1,4 @@
-<ul class="social-media-list">
+<ul class="links">
   {%- if site.github_username -%}
     <li><a href="https://github.com/{{ site.github_username | cgi_escape | escape }}">
       <img src="assets/svg/github.svg" alt="GitHub icon" />
@@ -7,6 +7,11 @@
   {%- if site.twitter_username -%}
     <li><a href="https://twitter.com/{{ site.twitter_username | cgi_escape | escape }}">
       <img src="assets/svg/twitter.svg" alt="Twitter icon" />
+    </a></li>
+  {%- endif -%}
+  {%- if site.linkedin_username -%}
+    <li><a href="https://www.linkedin.com/company/{{ site.linkedin_username | cgi_escape | escape }}">
+      <img src="assets/svg/linkedin.svg" alt="LinkedIn icon" />
     </a></li>
   {%- endif -%}
 </ul>
