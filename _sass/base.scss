@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
+html {
+  background: $black;
+}
+body {
+  background: none;
+}
 html,
 body {
   color: $white;
@@ -118,6 +124,12 @@ a {
     font: $base-font;
   }
 }
+@media (min-height: 880px) and (min-width: 680px) {
+  .site-footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
 
 @media (min-width: 680px) {
   .projects {
@@ -127,9 +139,6 @@ a {
     grid-auto-rows: minmax(100px, auto);
   }
   .site-footer {
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
     .cols {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
