@@ -26,6 +26,10 @@ h5 {
   text-transform: uppercase;
 }
 
+h3 {
+  margin: 2rem 0;
+}
+
 a {
   color: $green;
   text-decoration: none;
@@ -61,7 +65,7 @@ a {
 }
 
 .site-footer .col {
-  margin: 2rem 0 1rem;
+  margin: 0 0 1rem;
 }
 
 .links {
@@ -98,8 +102,46 @@ a {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   background: rgba($black, 0.5);
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   padding: 1rem;
+}
+
+.hero {
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: rgba($black, 0.5);
+  margin: 1rem -2rem;
+
+  .cta {
+    animation: color-loop 30s infinite;
+    padding: 2rem;
+    h1,
+    h2 {
+      text-transform: none;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  }
+  .video {
+    height: 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 #mc_embed_signup {
@@ -115,19 +157,21 @@ a {
     width: calc(100% - 2rem);
   }
   .button {
-    margin-top: 1rem;
-    padding: 0;
-    background: none;
-    color: $green;
-    border: none;
-    cursor: pointer;
-    font: $base-font;
+    display: inline-block;
   }
 }
-@media (min-height: 880px) and (min-width: 680px) {
-  .site-footer {
-    position: absolute;
-    bottom: 0;
+.button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background: $green;
+  text-transform: uppercase;
+  color: $black;
+  border: none;
+  cursor: pointer;
+  font: $base-font;
+  border-radius: 0rem;
+  &:hover {
+    background: $white;
   }
 }
 
@@ -146,7 +190,25 @@ a {
       grid-auto-rows: minmax(100px, auto);
     }
   }
+  .hero .cta {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }
+@media (min-width: 1080px) {
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
+  }
+}
+
 @media (min-width: 1280px) {
   .site-footer .cols {
     grid-template-columns: repeat(6, 1fr);

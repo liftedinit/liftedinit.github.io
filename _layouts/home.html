@@ -6,7 +6,19 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  <p class="site-description">{{ site.description }}</p>
+  <div class="hero">
+
+    <div class="cta">
+      <h1>Web3 in 30 minutes or less</h2>
+      <h2>A mix-and-match modular blockchain solution for everyone</h2>
+      {%- include mailchimp.html %}
+    </div>
+
+    <div class="video">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/LbcHZMfgLy4?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 
   {{ content }}
 
